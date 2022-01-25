@@ -62,13 +62,13 @@ inquirer.prompt(questions).then(response => {
 
 ## Table of Contents
 
-![Installation](#Installation)
-![Description](#Description)
-![Usage](#Usage)
-![License](#License)
-![Contribution](#Contribution)
-![Tests](#Tests)
-![Questions](#Questions)  
+- [Installation](#installation)  
+- [Description](#description)  
+- [Usage](#usage)  
+- [License](#license)  
+- [Contribution](#contribution)  
+- [Tests](#tests)  
+- [Questions](#questions)  
   
 ## Description
 ${response.description}
