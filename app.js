@@ -69,7 +69,7 @@ inquirer.prompt(questions).then(response => {
 ![Contribution](#Contribution)
 ![Tests](#Tests)
 ![Questions](#Questions)  
-
+  
 ## Description
 ${response.description}
 
