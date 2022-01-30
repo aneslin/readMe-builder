@@ -1,7 +1,8 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown')
 
-
+// TODO: Create an array of questions for user input
 const questions = [
     {name:"title",
      type: "input",
@@ -49,57 +50,23 @@ message: "What is your email address"
 }
 
 
-]
+];
 
-inquirer.prompt(questions).then(response => {
-    
-
-
-    console.log(response)
-    const md = `
-# ${response.title}
-[![license badge](https://img.shields.io/badge/license-${response.license}-green.svg)](https://shields.io/)
-
-## Table of Contents
-
-- [Installation](#installation)  
-- [Description](#description)  
-- [Usage](#usage)  
-- [License](#license)  
-- [Contribution](#contribution)  
-- [Tests](#tests)  
-- [Questions](#questions)  
-  
-## Description
-${response.description}
-
-## Installation
-${response.installation}  
-
-## Usage  
-${response.usage}
-
-## License
-This software is covered under the ${response.license} license.  
-
-## Contribution
-${response.contribution}  
-
-## Tests
-${response.test}
-
-## Questions
-Please contact me at ${response.email} with any question
-
-* [Github Profile](https://github.com/${response.githubId})
+// TODO: Create a function to write README file
+function writeToFile(filename, data) {
 
 
-`
-
-
-    fs.writeFile('README.md', md, (err)=> {if (err) {console.log(err)}
+    fs.writeFile(filename, data, (err)=> {if (err) {console.log(err)}
     else {
         console.log("readme generated")
-    }
-    })
-})
+}  }) 
+}
+    
+
+// TODO: Create a function to initialize app
+function init(questions, output) {inquirer.prompt(questions).then(response => {
+    writeToFile(output, generateMarkdown(response))
+ })
+}
+// Function call to initialize app
+init(questions,'./dist/readme.md')
