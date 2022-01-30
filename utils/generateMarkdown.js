@@ -24,7 +24,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license){
-  return ` ## License
+  return `## License
 This software is covered under the [${license}](${renderLicenseLink(license)}) license. ` 
   } return ''
 

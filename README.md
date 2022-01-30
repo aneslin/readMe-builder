@@ -1,38 +1,14 @@
+# Read Me generator
 
-# readme-generator
-[![license badge](https://img.shields.io/badge/license-MIT-green.svg)](https://shields.io/)
 
- 
+## Requirements
+* Nodejs
+* NPM
+* Inquirer package
 ## Description
-automatically generate a readme from prompts
+Node.js Program to create a readme.  Follow prompts to create a readme. Program will take submitted responses and create a well structured markdown file with best practices for a good readme, including licenses, a table of contents, usage and creator contact infomration.
 
-## Table of Contents
-- [Description](#description)  
-- [Installation](#installation)  
-- [Usage](#usage)  
-- [License](#license)  
-- [Contribution](#contribution)  
-- [Tests](#tests)  
-- [Questions](#questions) 
 
-## Installation
-nodejs; inquirer  
-
-## Usage  
-follow the prompts in the command line to generate a readme
-
-## License
-This software is covered under the MIT license.  
-
-## Contribution
-no contributions at this time  
-
-## Tests
-no test framework used
-
-## Questions
-Please contact me at aneslin125@gmail.com with any questions.
-
-* [Github Profile](https://github.com/aneslin)
-
+## Usage
+Before setup, install required packages via NPM.  Run the program in node. Enter a title, description, select a license, add usage information, methods to contribute, and contact information for questions.  On completion, a markdown file will be created in the "dist" directory .  
 
